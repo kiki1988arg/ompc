@@ -10,7 +10,13 @@
             "request": "launch",
             "name": "Lanzar Chrome contra localhost",
             "url": "http://localhost:4200",
-            "webRoot": "${workspaceFolder}"
+            "webRoot": "${workspaceFolder}",
+            "runtimeArgs": [
+                "--disable-web-security",
+                "--user-data-dir",
+                "--remote-debugging-port=9222"
+                ],
+            
         }
     ]
 }

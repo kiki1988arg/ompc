@@ -19,7 +19,7 @@ export class GriddetailComponent implements OnInit {
   ngOnInit() {
     console.log('detailgrid');
     this.Example.PostData(23123).subscribe(data => {
-      this.response = data;
+
       console.log(data);
       console.log(this.response);
         });
