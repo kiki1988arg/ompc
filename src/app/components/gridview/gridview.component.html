@@ -1,0 +1,41 @@
+<kendo-grid
+        [height]="400"
+        [data]="gridData"        
+        [sort]="state.sort"        
+        [sortable]="true"            
+        (dataStateChange)="dataStateChange($event)"  
+        (detailExpand)="getDetail($event)"             
+    >
+    <kendo-grid-column field="NroPedido" title="Nro de Pedido" width="30"  [filterable]="false">
+    </kendo-grid-column>
+    <kendo-grid-column field="Sociedad" width="80" title="sociedad">
+    </kendo-grid-column>
+    <kendo-grid-column field="Comprador" title="Comprador" width="60">
+    </kendo-grid-column>  
+    <kendo-grid-column field="FechaCreacion" title="Fecha creación" width="45" filter="date" format="{0:d}">   
+    </kendo-grid-column>
+    <kendo-grid-column field="Importe" title="Importe" width="30">
+      </kendo-grid-column>
+    <kendo-grid-column field="CondPago" title="Condición de pago" width="50">
+    </kendo-grid-column>  
+    <kendo-grid-column field="FechaIni" title="Fecha inicio de validez" width="45"  format="{0:d}">
+    </kendo-grid-column>  
+    <kendo-grid-column field="FechaFin" title="Fecha fin de validez" width="45"  format="{0:d}">
+    </kendo-grid-column>  
+    <kendo-grid-column field="OC" title="O.C." width="30">
+    </kendo-grid-column>      
+    <kendo-grid-column field="version" title="Versión" width="30">
+        <ng-template kendoGridCellTemplate let-dataItem>
+            <span class="k-i-pdf k-i-file-pdf"></span>
+            <span class="k-i-pdf k-i-file-pdf" style="font-size: 64px;"></span>
+            <span class="k-i-pdf k-i-file-pdf" style="color: limegreen;"></span>   
+        </ng-template>
+   
+        
+       
+    </kendo-grid-column>   
+    <ng-template kendoGridDetailTemplate let-dataItem                        
+              width="30">
+           <app-griddetail></app-griddetail>
+    </ng-template>   
+    </kendo-grid>
