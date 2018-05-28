@@ -1,0 +1,25 @@
+<kendo-grid    
+        [data]="gridData"  
+        [sortable]="true"          
+    >
+    <kendo-grid-column field="DocumentNumber" title="Nro. Docto." width="30">
+    </kendo-grid-column>
+    <kendo-grid-column field="Position" width="30" title="Pos.">
+    </kendo-grid-column>
+    <kendo-grid-column field="Material" title="Material" width="60">
+    </kendo-grid-column>  
+    <kendo-grid-column field="Description" title="Descripción" width="45" filter="date" format="{0:d}">   
+    </kendo-grid-column>
+    <kendo-grid-column field="InitialDate" title="F.Entrada" width="30">
+      </kendo-grid-column>
+    <kendo-grid-column field="Centro" title="Centro" width="50">
+    </kendo-grid-column>  
+    <kendo-grid-column field="Quantity" title="Cantidad" width="45"  format="{0:d}">
+    </kendo-grid-column>  
+    <kendo-grid-column field="UM" title="UM" width="45"  format="{0:d}">
+    </kendo-grid-column>  
+    <kendo-grid-column field="TotalAmount" title="Importe Total" width="30">
+    </kendo-grid-column>      
+    <kendo-grid-column field="currency" title="Mon" width="30">
+        </kendo-grid-column>      
+    </kendo-grid>

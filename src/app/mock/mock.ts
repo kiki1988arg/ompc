@@ -15,8 +15,8 @@ export const mock = [
         'CondPago': fakerjs.finance.transactionType(),
         'FechaIni': fakerjs.date.past(),
         'FechaFin': fakerjs.date.future(),
-        'OC': fakerjs.random.image,
-        'version': fakerjs.random.number()
+        'OC': 'http://www.google.com',
+        'version': fakerjs.random.number({ min: 0, max: 999})
     },     {
         'NroPedido': fakerjs.random.number({ min: 1000000000, max: 9999999999 }),
         'Sociedad': fakerjs.commerce.productName(),
@@ -26,8 +26,8 @@ export const mock = [
         'CondPago': fakerjs.finance.transactionType(),
         'FechaIni': fakerjs.date.past(),
         'FechaFin': fakerjs.date.future(),
-        'OC': fakerjs.random.image,
-        'version': fakerjs.random.number()
+        'OC': 'www.google.com',
+        'version': fakerjs.random.number({ min: 0, max: 999})
     },    {
         'NroPedido': fakerjs.random.number({ min: 1000000000, max: 9999999999 }),
         'Sociedad': fakerjs.commerce.productName(),
@@ -37,8 +37,8 @@ export const mock = [
         'CondPago': fakerjs.finance.transactionType(),
         'FechaIni': fakerjs.date.past(),
         'FechaFin': fakerjs.date.future(),
-        'OC': fakerjs.random.image,
-        'version': fakerjs.random.number()
+        'OC': 'www.google.com',
+        'version': fakerjs.random.number({ min: 0, max: 999})
     },    {
         'NroPedido': fakerjs.random.number({ min: 1000000000, max: 9999999999 }),
         'Sociedad': fakerjs.commerce.productName(),
@@ -48,8 +48,8 @@ export const mock = [
         'CondPago': fakerjs.finance.transactionType(),
         'FechaIni': fakerjs.date.past(),
         'FechaFin': fakerjs.date.future(),
-        'OC': fakerjs.random.image,
-        'version': fakerjs.random.number()
+        'OC': 'www.google.com',
+        'version': fakerjs.random.number({ min: 0, max: 999})
     },    {
         'NroPedido': fakerjs.random.number({ min: 1000000000, max: 9999999999 }),
         'Sociedad': fakerjs.commerce.productName(),
@@ -59,8 +59,8 @@ export const mock = [
         'CondPago': fakerjs.finance.transactionType(),
         'FechaIni': fakerjs.date.past(),
         'FechaFin': fakerjs.date.future(),
-        'OC': fakerjs.random.image,
-        'version': fakerjs.random.number()
+        'OC': 'www.google.com',
+        'version': fakerjs.random.number({ min: 0, max: 999})
     },    {
         'NroPedido': fakerjs.random.number({ min: 1000000000, max: 9999999999 }),
         'Sociedad': fakerjs.commerce.productName(),
@@ -70,8 +70,8 @@ export const mock = [
         'CondPago': fakerjs.finance.transactionType(),
         'FechaIni': fakerjs.date.past(),
         'FechaFin': fakerjs.date.future(),
-        'OC': fakerjs.random.image,
-        'version': fakerjs.random.number()
+        'OC': 'www.google.com',
+        'version': fakerjs.random.number({ min: 0, max: 999})
     },    {
         'NroPedido': fakerjs.random.number({ min: 1000000000, max: 9999999999 }),
         'Sociedad': fakerjs.commerce.productName(),
@@ -81,8 +81,8 @@ export const mock = [
         'CondPago': fakerjs.finance.transactionType(),
         'FechaIni': fakerjs.date.past(),
         'FechaFin': fakerjs.date.future(),
-        'OC': fakerjs.random.image,
-        'version': fakerjs.random.number()
+        'OC': 'www.google.com',
+        'version': fakerjs.random.number({ min: 0, max: 999})
     },    {
         'NroPedido': fakerjs.random.number({ min: 1000000000, max: 9999999999 }),
         'Sociedad': fakerjs.commerce.productName(),
@@ -92,8 +92,8 @@ export const mock = [
         'CondPago': fakerjs.finance.transactionType(),
         'FechaIni': fakerjs.date.past(),
         'FechaFin': fakerjs.date.future(),
-        'OC': fakerjs.random.image,
-        'version': fakerjs.random.number()
+        'OC': 'www.google.com',
+        'version': fakerjs.random.number({ min: 0, max: 999})
     },    {
         'NroPedido': fakerjs.random.number({ min: 1000000000, max: 9999999999 }),
         'Sociedad': fakerjs.commerce.productName(),
@@ -103,8 +103,8 @@ export const mock = [
         'CondPago': fakerjs.finance.transactionType(),
         'FechaIni': fakerjs.date.past(),
         'FechaFin': fakerjs.date.future(),
-        'OC': fakerjs.random.image,
-        'version': fakerjs.random.number()
+        'OC': 'www.google.com',
+        'version': fakerjs.random.number({ min: 0, max: 999})
     },    {
         'NroPedido': fakerjs.random.number({ min: 1000000000, max: 9999999999 }),
         'Sociedad': fakerjs.commerce.productName(),
@@ -114,8 +114,8 @@ export const mock = [
         'CondPago': fakerjs.finance.transactionType(),
         'FechaIni': fakerjs.date.past(),
         'FechaFin': fakerjs.date.future(),
-        'OC': fakerjs.random.image,
-        'version': fakerjs.random.number()
+        'OC': 'www.google.com',
+        'version': fakerjs.random.number({ min: 0, max: 999})
     },    {
         'NroPedido': fakerjs.random.number({ min: 1000000000, max: 9999999999 }),
         'Sociedad': fakerjs.commerce.productName(),
@@ -125,8 +125,8 @@ export const mock = [
         'CondPago': fakerjs.finance.transactionType(),
         'FechaIni': fakerjs.date.past(),
         'FechaFin': fakerjs.date.future(),
-        'OC': fakerjs.random.image,
-        'version': fakerjs.random.number()
+        'OC': 'www.google.com',
+        'version': fakerjs.random.number({ min: 0, max: 999})
 
 
 

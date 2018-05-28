@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GridviewComponent } from './gridview.component';
+import { MaingridComponent } from './maingrid.component';
 
-describe('GridviewComponent', () => {
-  let component: GridviewComponent;
-  let fixture: ComponentFixture<GridviewComponent>;
+describe('MaingridComponent', () => {
+  let component: MaingridComponent;
+  let fixture: ComponentFixture<MaingridComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GridviewComponent ]
+      declarations: [ MaingridComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GridviewComponent);
+    fixture = TestBed.createComponent(MaingridComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,17 +1,16 @@
-import { ExampleService } from './../services/example.service';
+import { ExampleService } from '@services/example.service';
 import { ContratServiceDetail } from '@models/ContratServiceDetail';
 import { Component, OnInit } from '@angular/core';
 import { GridComponent, GridDataResult } from '@progress/kendo-angular-grid';
 import { mockdetail } from '@mocks/mockdetail';
 
-
-
 @Component({
-  selector: 'app-griddetail',
-  templateUrl: './griddetail.component.html',
-  styleUrls: ['./griddetail.component.css']
+  selector: 'app-detailgrid',
+  templateUrl: './detailgrid.component.html',
+  styleUrls: ['./detailgrid.component.css']
 })
-export class GriddetailComponent implements OnInit {
+export class DetailgridComponent implements OnInit {
+
   public response: string;
   public gridDataDetail: any = mockdetail;
   constructor(private Example: ExampleService) { }
@@ -24,7 +23,6 @@ export class GriddetailComponent implements OnInit {
       console.log(this.response);
         });
   }
-
 
 
 }

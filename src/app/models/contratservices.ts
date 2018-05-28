@@ -1,13 +1,14 @@
 export class ContratService {
-    NroPedido: number;
-    Sociedad: string;
-    Comprador: string;
-    FechaCreacion: Date;
-    Importe: number;
-    CondPago: string;
-    FechaIni: Date;
-    FechaFin: Date;
+    Number: number;
+    Society: string;
+    Buyer: string;
+    CreationDate: Date;
+    Amount: number;
+    PaymentConition: string;
+    InitialDate: Date;
+    EndDate: Date;
     OC: string;
-    version: number;
+    Version: number;
 }
 
+// Pos	Subpos	Hist.	Descripción	Cant.	UM	Precio	Mon	Por	Grupo de artículos

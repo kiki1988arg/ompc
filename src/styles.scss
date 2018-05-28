@@ -1,3 +1,6 @@
+
+@import "~bootstrap/scss/bootstrap-grid.scss";
+
 $base-theme:Default;
 $skin-name:ompc;
 $accent: #007cc0;
@@ -21,11 +24,13 @@ $series-e: #c03c53;
 $series-f: #acacac;
 
 $font-size:13px;	
-$font-family: Roboto, 'Helvetica Neue', sans-serif;	
+$font-family: (Roboto, 'Helvetica Neue', sans-serif);	
 $line-height:0.85;
 $font-weight:700;
 
-@import "~@progress/kendo-theme-default/scss/all";
+@import "~@progress/kendo-theme-material/scss/all";
+
+
 
 .k-grid-header .k-header > .k-link {
     margin: -16px -24px;
@@ -50,7 +55,15 @@ $font-weight:700;
     font-weight: 400;
 }
 
-.k-link ng-star-inserted
+.k-link
 {
-    
+    font-family: Segoe UI;
+    text-decoration-color: rgb(62, 109, 148);
+
 }
+
+body {
+    
+   
+}
+

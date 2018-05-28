@@ -20,7 +20,7 @@ const httpOptions = {
 export class ExampleService implements OnInit {
   private getMockUrl = 'http://localhost:54290/Contract/GetMock';
   private getExampleUrl = 'http://localhost:54290/Contract/GetExampleGrid';
-  private PostDataUrl = 'http://localhost:54290/Contract/SaveData';
+
   private exampleRequest: RequestExample = new RequestExample();
 
   ngOnInit(): void {
@@ -48,7 +48,7 @@ export class ExampleService implements OnInit {
     this.exampleRequest.incoming = id;
     this.exampleRequest.prueba = new Ejemplo();
     this.exampleRequest.prueba.incoming = 14314;
-    return this.http.post<RequestExample>('http://localhost:54290/Contract/SaveData', this.exampleRequest
+    return this.http.post<RequestExample>('/Contract/SaveData', this.exampleRequest
       , httpOptions);
   }
 
