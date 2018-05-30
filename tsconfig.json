@@ -18,8 +18,8 @@
     "paths": {
       "@models/*": ["src/app/models/*"],
       "@mocks/*": ["src/app/mock/*"],
-      "@services/*": ["src/app/services/*"]
-
+      "@services/*": ["src/app/services/*"],
+      "@columns/*": ["src/app/columns/*"]  
     },
   }
 }

@@ -1,5 +1,5 @@
 import { ExampleService } from '@services/example.service';
-import { ContratServiceDetail } from '@models/ContratServiceDetail';
+import { ContratDetail } from '@models/ContratDetail';
 import { Component, OnInit } from '@angular/core';
 import { GridComponent, GridDataResult } from '@progress/kendo-angular-grid';
 import { mockdetail } from '@mocks/mockdetail';

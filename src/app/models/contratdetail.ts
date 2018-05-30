@@ -1,4 +1,4 @@
-export class ContratServiceDetail {
+export class ContratDetail {
     Position: number;
     SubPosition: number;
     History: string;

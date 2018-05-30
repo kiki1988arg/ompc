@@ -2,3 +2,6 @@ kendo-tabstrip p {
     margin: 0;
     padding: 8px;
 }
+#filter {
+    margin-bottom:5px;
+}

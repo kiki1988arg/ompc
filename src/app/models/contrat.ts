@@ -1,10 +1,10 @@
-export class ContratService {
-    Number: number;
+export class Contrat {
+    DocNumber: number;
     Society: string;
     Buyer: string;
     CreationDate: Date;
     Amount: number;
-    PaymentConition: string;
+    PaymentCondition: string;
     InitialDate: Date;
     EndDate: Date;
     OC: string;

@@ -17,6 +17,8 @@ import { SubdetailgridComponent } from './components/subdetailgrid/subdetailgrid
 import { DetailgridComponent } from './components/detailgrid/detailgrid.component';
 import { LabelModule } from '@progress/kendo-angular-label';
 import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
+import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
+
 
 
 
@@ -38,7 +40,8 @@ import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
     HttpModule,
     HttpClientModule,
     LabelModule,
-    DateInputsModule
+    DateInputsModule,
+    DropDownsModule
   ],
   providers: [ExampleService],
   bootstrap: [AppComponent]
