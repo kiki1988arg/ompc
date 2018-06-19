@@ -1,0 +1,102 @@
+<div class="row" id="filter" style="box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);">
+    <kendo-splitter orientation="horizontal">
+        <kendo-splitter-pane>
+            <kendo-tabstrip style="height:275px;">
+                <kendo-tabstrip-tab [title]="'Contratos por sociedad'" [selected]="true">
+                    <ng-template kendoTabContent> 
+
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="card">
+                                    <div class="card-block">
+                                        <form class="k-form">
+                                            <fieldset>
+                                                <legend>Society</legend>
+                                                <label class="k-form-field">
+                                                    <kendo-dropdownlist [data]="listItems">
+                                                    </kendo-dropdownlist>
+                                                </label>
+                                            </fieldset>
+                                        </form>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-4">
+                                <div class="card">
+                                    <div class="card-block">
+                                        <form class="k-form">
+                                            <fieldset>
+                                                <legend>Nro Contrato</legend>
+                                                <span>Desde</span>
+                                                <kendo-numerictextbox [min]="0" [max]="100" [autoCorrect]="autoCorrect">
+                                                </kendo-numerictextbox>
+                                                <span>Hasta</span>
+                                                <kendo-numerictextbox [min]="0" [max]="100" [autoCorrect]="autoCorrect">
+                                                </kendo-numerictextbox>
+                                            </fieldset>
+
+                                        </form>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-4">
+                                <div class="card">
+                                    <div class="card-block">
+                                        <form class="k-form">
+                                            <fieldset>
+                                                <legend>Fecha de liberación: </legend>
+
+                                                <span>Desde</span>    
+                                                <kendo-datepicker #datepicker></kendo-datepicker>
+                                                <span>Hasta</span>     
+                                                <kendo-datepicker #datepicker></kendo-datepicker>
+                                            </fieldset>
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                          
+                        </div>
+                        <div class="card">
+                                <div class="text-right">
+                                    <button type="button" class="k-button">Buscar</button>
+                                    <button type="button">Exportar</button>
+                                    <button type="button">Limpiar</button>
+                                </div>
+                            </div>
+
+
+                    </ng-template>
+                    <!-- <ng-template kendoTabContent>
+                            <p>
+                                Football is a family of team sports that involve, to varying degrees, kicking a ball with the foot to score a goal. Unqualified,
+                                the word football is understood to refer to whichever form of football is the most popular in
+                                the regional context in which the word appears.
+                            </p>
+                        </ng-template> -->
+                </kendo-tabstrip-tab>
+                <kendo-tabstrip-tab [title]="'Contrato puntual'">
+                    <ng-template kendoTabContent>
+                        <p>
+                            Football is a family of team sports that involve, to varying degrees, kicking a ball with the foot to score a goal. Unqualified,
+                            the word football is understood to refer to whichever form of football is the most popular in
+                            the regional context in which the word appears.
+                        </p>
+                    </ng-template>
+                </kendo-tabstrip-tab>
+                <kendo-tabstrip-tab [title]="'Historial por contratos'">
+                    <ng-template kendoTabContent>
+                        <p>
+                            Football is a family of team sports that involve, to varying degrees, kicking a ball with the foot to score a goal. Unqualified,
+                            the word football is understood to refer to whichever form of football is the most popular in
+                            the regional context in which the word appears.
+                        </p>
+                    </ng-template>
+                </kendo-tabstrip-tab>
+            </kendo-tabstrip>
+        </kendo-splitter-pane>
+    </kendo-splitter>
+</div>

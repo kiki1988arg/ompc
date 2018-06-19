@@ -1,49 +1,47 @@
+import { NotfoundComponent } from '@shared/components/notfound/notfound.component';
+// Root
 import { AppComponent } from './app.component';
 
-import { ExampleService } from './services/example.service';
+// Angular Modules
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { LayoutModule } from '@progress/kendo-angular-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { GridModule } from '@progress/kendo-angular-grid';
-
-
 import { HttpModule } from '@angular/http';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { RouterModule, Routes } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
+import { SharedModule } from './shared/shared.module';
 
-import { FilterComponent } from './components/filter/filter.component';
-import { MaingridComponent } from './components/maingrid/maingrid.component';
-import { SubdetailgridComponent } from './components/subdetailgrid/subdetailgrid.component';
-import { DetailgridComponent } from './components/detailgrid/detailgrid.component';
-import { LabelModule } from '@progress/kendo-angular-label';
-import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
-import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
+// Http interceptor
+import { InterceptorToken } from './interceptor-token';
 
-
-
-
+// Material
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FilterComponent,
-    SubdetailgridComponent,
-    MaingridComponent,
-    DetailgridComponent
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,
-    LayoutModule,
     BrowserModule,
     BrowserAnimationsModule,
-    GridModule,
     HttpModule,
     HttpClientModule,
-    LabelModule,
-    DateInputsModule,
-    DropDownsModule
+    RouterModule,
+    AppRoutingModule,
+    MatToolbarModule,
+    FlexLayoutModule
   ],
-  providers: [ExampleService],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: InterceptorToken,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

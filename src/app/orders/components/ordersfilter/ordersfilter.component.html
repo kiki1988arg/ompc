@@ -1,0 +1,186 @@
+<mat-accordion>
+  <mat-expansion-panel [expanded]="expanded" (opened)="expanded = true" (closed)="expanded = false">
+    <mat-expansion-panel-header color="warn" style="background-color: #f44336;">
+      <mat-panel-title>
+        FILTERS
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+
+    <mat-tab-group>
+      <mat-tab label="Search for company">
+        <mat-card>
+          <mat-card-content>
+            <div class="container" fxLayout fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="10px" fxLayoutGap.xs="0">
+              <div fxFlex="33%">
+
+                <fieldset>
+                  <legend>Company</legend>
+                  <mat-form-field>
+                    <mat-select placeholder="Company" [(value)]="Filters.companyField" name="companyField" required>
+                      <mat-option>None</mat-option>
+                      <mat-option value="TAMS">TAMS</mat-option>
+                      <mat-option value="TM01">TM01</mat-option>
+                      <mat-option value="TC03">TC03</mat-option>
+                    </mat-select>
+                    <mat-hint>Choose a company from the list</mat-hint>
+                  </mat-form-field>
+
+                  <!-- <mat-form-field appearance="legacy">
+                        <input matInput  [(ngModel)]="Filters.companyField" name="companyField" placeholder="Select your society">
+                        <mat-hint>Hint</mat-hint>
+                      </mat-form-field>                -->
+                </fieldset>
+              </div>
+              <div fxFlex="33%">
+                <fieldset>
+                  <legend>Document number</legend>
+                  <mat-form-field appearance="legacy">
+                    <input matInput type=tel placeholder="From" required manLength="10" maxLength="10" [(ngModel)]="Filters.documentFromField"
+                      name="documentFromField">
+                    <mat-hint>This value must have 10 characters</mat-hint>
+                    <mat-error>required field</mat-error>
+                  </mat-form-field>
+                  <mat-form-field appearance="legacy">
+                    <input matInput placeholder="To" manLength="10" maxLength="10" value="" [(ngModel)]="Filters.documentToField" name="documentToField">
+                    <mat-hint>This value must have 10 characters</mat-hint>
+                  </mat-form-field>
+                </fieldset>
+              </div>
+              <div fxFlex="33%">
+                <fieldset>
+                  <legend>Date release</legend>
+
+                  <mat-form-field>
+                    <input matInput [matDatepicker]="pickerFrom" placeholder="From" [(ngModel)]="Filters.dateReleaseOrderFromField" name="dateReleaseOrderFromField">
+                    <mat-datepicker-toggle matSuffix [for]="pickerFrom"></mat-datepicker-toggle>
+                    <mat-datepicker #pickerFrom></mat-datepicker>
+                    <mat-hint>Date format: Month/Day/Year</mat-hint>
+                  </mat-form-field>
+                  <mat-form-field>
+                    <input matInput [matDatepicker]="pickerTo" placeholder="To" [(ngModel)]="Filters.dateReleaseOrderToField" name="dateReleaseOrderToField">
+                    <mat-datepicker-toggle matSuffix [for]="pickerTo"></mat-datepicker-toggle>
+                    <mat-datepicker #pickerTo></mat-datepicker>
+                    <mat-hint>Date format: Month/Day/Year</mat-hint>
+                  </mat-form-field>
+                  <!-- <span>From:</span>
+                          <kendo-datepicker [(ngModel)]="Filters.dateReleaseOrderFromField" name="dateReleaseOrderFromField"></kendo-datepicker>  
+                        
+                 
+                    
+                          <span>To:</span>
+                          <kendo-datepicker [(ngModel)]="Filters.dateReleaseOrderToField" name="dateReleaseOrderToField"></kendo-datepicker> -->
+
+
+                </fieldset>
+              </div>
+
+            </div>
+          </mat-card-content>
+          <mat-card-actions align="end">
+            <button mat-raised-button color="primary" (click)="search()">Search</button>
+            <button mat-raised-button color="primary">Clear</button>
+            <button mat-raised-button color="primary">Export</button>
+          </mat-card-actions>
+        </mat-card>
+
+
+      </mat-tab>
+      <mat-tab label="Specific order">
+        <div class="container" fxLayout fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="10px" fxLayoutGap.xs="0">
+          <div fxFlex="33%">
+            <mat-card>
+              <mat-card-content>
+                <fieldset>
+                  <legend>Document number</legend>
+                  <mat-form-field appearance="legacy">
+                    <input matInput type=tel placeholder="From" required manLength="10" maxLength="10" [(ngModel)]="Filters.documentFromField"
+                      name="documentFromField">
+                    <mat-hint>This value must have 10 characters</mat-hint>
+                    <mat-error>required field</mat-error>
+                  </mat-form-field>
+                  <mat-form-field appearance="legacy">
+                    <input matInput placeholder="To" manLength="10" maxLength="10" value="" [(ngModel)]="Filters.documentToField" name="documentToField">
+                    <mat-hint>This value must have 10 characters</mat-hint>
+                  </mat-form-field>
+                </fieldset>
+                <mat-card-actions align="center">
+                  <button mat-raised-button color="primary" (click)="search()">Search--
+                  </button>
+                  <button mat-raised-button color="primary">Clear</button>
+                  <button mat-raised-button color="primary">Export</button>
+                </mat-card-actions>
+
+              </mat-card-content>
+            </mat-card>
+          </div>
+        </div>
+      </mat-tab>
+      <mat-tab label="History" disabled>
+
+      </mat-tab>
+    </mat-tab-group>
+
+  </mat-expansion-panel>
+</mat-accordion>
+<!-- 
+  <div class="row" style="background-color: whitesmoke; box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);height:200px; margin-bottom: 10px;">
+    <div class="col-4">
+      <div class="card">
+        <div class="card-block">
+          <form class="k-form">
+            <fieldset>
+              <legend>Society</legend>
+              <label class="k-form-field">
+              </label>
+              <kendo-textbox-container>
+                <input kendoTextBox [(ngModel)]="Filters.companyField" name="companyField" />
+              </kendo-textbox-container>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+  
+    <div class="col-4">
+      <div class="card">
+        <div class="card-block">
+          <form class="k-form">
+            <fieldset>
+              <legend>Nro Contrato</legend>
+              <span>Desde</span>
+              <kendo-numerictextbox [format]="'0'" [autoCorrect]="autoCorrect" [min]="min" [max]="max" [(ngModel)]="Filters.documentFromField"
+                name="documentFromField">
+              </kendo-numerictextbox>
+              <span>Hasta</span>
+              <kendo-numerictextbox [min]="0" [max]="100" [format]="'0'" [(ngModel)]="Filters.documentToField" name="documentToField">
+              </kendo-numerictextbox>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+  
+    <div class="col-4">
+      <div class="card">
+        <div class="card-block">
+          <form class="k-form">
+            <fieldset>
+              <legend>Fecha de liberación: </legend>
+  
+              <span>Desde</span>
+              <kendo-datepicker [(ngModel)]="Filters.dateReleaseOrderFromField" name="dateReleaseOrderFromField"></kendo-datepicker>
+              <span>Hasta</span>
+              <kendo-datepicker [(ngModel)]="Filters.dateReleaseOrderToField" name="dateReleaseOrderToField"></kendo-datepicker>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+  
+  
+    <div class="col-12">
+  
+      <button kendoButton (click)="search()" class="k-float-right">Search</button>
+  
+    </div>
+  </div> -->

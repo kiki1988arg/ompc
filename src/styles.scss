@@ -1,34 +1,25 @@
 
-@import "~bootstrap/scss/bootstrap-grid.scss";
-
-$base-theme:Default;
-$skin-name:ompc;
-$accent: #007cc0;
-$info: #d1eaff;
-$success: #cce8d8;
-$warning: #fef1d0;
-$error: #ffd7d7;
-$text-color: #515967;
-$bg-color: #ffffff;
-$base-text: #333;
-$base-bg: #f2f2f2;
-$hovered-text: #333;
-$hovered-bg: #eaeaea;
-$selected-text: #ffffff;
-$selected-bg: #007cc0;
-$series-a: #008fd3;
-$series-b: #99d101;
-$series-c: #f39b02;
-$series-d: #f05662;
-$series-e: #c03c53;
-$series-f: #acacac;
-
-$font-size:13px;	
-$font-family: "Comic Sans MS", cursive, sans-serif;	
-$line-height:0.90;
-$font-weight:700;
-
-@import "~@progress/kendo-theme-material/scss/all";
+// $base-theme:Default;
+// $skin-name:ompc;
+// $accent: #007cc0;
+// $info: #d1eaff;
+// $success: #cce8d8;
+// $warning: #fef1d0;
+// $error: #ffd7d7;
+// $text-color: #515967;
+// $bg-color: #ffffff;
+// $base-text: #333;
+// $base-bg: #f2f2f2;
+// $hovered-text: #333;
+// $hovered-bg: #eaeaea;
+// $selected-text: #ffffff;
+// $selected-bg: #007cc0;
+// $series-a: #008fd3;
+// $series-b: #99d101;
+// $series-c: #f39b02;
+// $series-d: #f00;
+// $series-e: #c03c53;
+// $series-f: #acacac;
 
 
 
@@ -53,9 +44,9 @@ $font-weight:700;
     overflow: hidden;
     text-overflow: ellipsis;
     font-weight: 400;
-    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
-    color:rgb(81, 89, 103)
-;
+    font-family: 'Raleway',sans-serif;
+    color: #333333;
+
 }
 
 .k-link
@@ -66,23 +57,62 @@ $font-weight:700;
 }
 
 body {
-    background-color: #337ab7;   
-    overflow: hidden;
+
 }
 
-.k-grid .k-hierarchy-cell .k-icon{
-    color: rgba(236, 0, 0, 0.79)
-}
+
 
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col, .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl, .col-xl-auto {
 padding-left: 0px;
 padding-right: 0px;
 }
 
-.inp {
-    font-size: 13px;
-}
-
 .formfilter {
     margin-top:-25px
 }
+
+
+.k-grid-header .k-header:not(.k-widget) {
+    font-size: 12px;
+    color: #337ab7;
+    font-weight: 700;
+}
+
+.k-i-plus{
+    // content: "\e005"; 
+    color:red
+}
+
+.k-i-minus::before, .k-minus::before {
+    // content: "\e006";
+    color:black;
+}
+
+
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+
+
+$candy-app-primary: mat-palette($mat-red);
+$candy-app-accent:  mat-palette($mat-red);
+
+
+// The warn palette is optional (defaults to red).
+$candy-app-warn:    mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-app-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($candy-app-theme);

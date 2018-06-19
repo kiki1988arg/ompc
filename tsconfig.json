@@ -19,7 +19,11 @@
       "@models/*": ["src/app/models/*"],
       "@mocks/*": ["src/app/mock/*"],
       "@services/*": ["src/app/services/*"],
-      "@columns/*": ["src/app/columns/*"]  
+      "@columns/*": ["src/app/columns/*"],  
+      "@interfaces/*" :  ["src/app/interfaces/*"],
+      "@contracts/*" :  ["src/app/contracts/*"],
+      "@orders/*" :  ["src/app/orders/*"],  
+      "@shared/*" :  ["src/app/shared/*"]  
     },
   }
 }

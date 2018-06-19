@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ompc",
+            "outputPath": "D:/exiros red team/NET/SW-NET/SW-NET.OrderManagement/Main/SW.OrderManagement.Mvc/Scripts/Angular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -75,9 +75,6 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
-              {
-                "input": "node_modules/@progress/kendo-theme-default/scss/all.scss"
-              },
               "src/styles.css"
             ],
             "scripts": [],
