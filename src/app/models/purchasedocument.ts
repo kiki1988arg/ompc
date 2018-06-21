@@ -7,7 +7,7 @@ export class PurchaseDocument {
     Supplier: string;
     DocumentType: string;
     PurchaseDocumentClass: string;
-    DateRelease: DateTimeFormat;
+    DateRelease: Date;
     PurchaseOrganization: string;
     PurchaseGroup: string;
     PurchaseGroupDenomination: string;

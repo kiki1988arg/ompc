@@ -3,6 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import { ordercolumns } from '@orders/Columns/orders';
 import { IColumnSetting } from '@interfaces/Icolumns';
 import { OrderService } from '@orders/services/order.service';
+import { ordersmock } from '@orders/mocks/ordersmock';
+
+
 
 @Component({
   selector: 'app-orders',
@@ -13,7 +16,7 @@ export class OrdersComponent implements OnInit {
   public columns: IColumnSetting[] = ordercolumns;
   public mock: any[];
   public orderFilter: PurchaseDocumentFilters;
-  public gridData: any[];
+  public gridData: any[] = ordersmock;
 
   constructor( private OrderServices: OrderService) { }
 

@@ -1,9 +1,13 @@
-<mat-accordion>
-  <mat-expansion-panel [expanded]="expanded" (opened)="expanded = true" (closed)="expanded = false">
-    <mat-expansion-panel-header color="warn" style="background-color: #f44336;">
+<mat-accordion class="headers-align">
+  <mat-expansion-panel [expanded]="expanded" (opened)="expanded = true" (closed)="expanded = false" hideToggle="true">
+    <mat-expansion-panel-header style="background-color: #f44336;" expandedHeight="48px">
       <mat-panel-title>
-        FILTERS
-      </mat-panel-title>
+        <p>FILTERS</p>
+      </mat-panel-title> 
+      <mat-panel-description>        
+          {{expanded ? 'Close filters' : 'Open filters'}}    
+          <mat-icon>menu</mat-icon>
+        </mat-panel-description>
     </mat-expansion-panel-header>
 
     <mat-tab-group>
@@ -11,7 +15,7 @@
         <mat-card>
           <mat-card-content>
             <div class="container" fxLayout fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="10px" fxLayoutGap.xs="0">
-              <div fxFlex="33%">
+              <div fxFlex>
 
                 <fieldset>
                   <legend>Company</legend>
@@ -31,7 +35,7 @@
                       </mat-form-field>                -->
                 </fieldset>
               </div>
-              <div fxFlex="33%">
+              <div fxFlex>
                 <fieldset>
                   <legend>Document number</legend>
                   <mat-form-field appearance="legacy">
@@ -46,7 +50,7 @@
                   </mat-form-field>
                 </fieldset>
               </div>
-              <div fxFlex="33%">
+              <div fxFlex>
                 <fieldset>
                   <legend>Date release</legend>
 
@@ -77,9 +81,8 @@
             </div>
           </mat-card-content>
           <mat-card-actions align="end">
-            <button mat-raised-button color="primary" (click)="search()">Search</button>
-            <button mat-raised-button color="primary">Clear</button>
-            <button mat-raised-button color="primary">Export</button>
+            <button mat-raised-button color="warn" (click)="search()"><i class="material-icons">search</i>Search</button>
+            <button mat-raised-button color="primary"><i class="material-icons">clear</i>Clear</button>            
           </mat-card-actions>
         </mat-card>
 
@@ -106,8 +109,7 @@
                 <mat-card-actions align="center">
                   <button mat-raised-button color="primary" (click)="search()">Search--
                   </button>
-                  <button mat-raised-button color="primary">Clear</button>
-                  <button mat-raised-button color="primary">Export</button>
+                  <button mat-raised-button color="primary">Clear</button>                  
                 </mat-card-actions>
 
               </mat-card-content>
@@ -122,6 +124,8 @@
 
   </mat-expansion-panel>
 </mat-accordion>
+
+<button mat-fab color="warn" class="floatbtn" (click)="expanded = true"><mat-icon>edit</mat-icon></button>
 <!-- 
   <div class="row" style="background-color: whitesmoke; box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);height:200px; margin-bottom: 10px;">
     <div class="col-4">

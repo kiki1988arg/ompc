@@ -7,13 +7,13 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatListModule } from '@angular/material/list';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatSelectModule} from '@angular/material/select';
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatNativeDateModule} from '@angular/material';
-import {MatIconModule} from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSelectModule } from '@angular/material/select';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material';
+import { MatIconModule } from '@angular/material/icon';
 import { FlexLayoutModule } from '@angular/flex-layout';
-
+import {MatChipsModule} from '@angular/material/chips';
 
 
 @NgModule({
@@ -31,7 +31,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatDatepickerModule,
     MatNativeDateModule,
     MatIconModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatChipsModule
   ],
   declarations: []
   ,
@@ -48,7 +49,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatDatepickerModule,
     MatNativeDateModule,
     MatIconModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatChipsModule
 
   ]
 })

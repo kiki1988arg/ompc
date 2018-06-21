@@ -4,7 +4,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-ordersfilter',
   templateUrl: './ordersfilter.component.html',
-  styleUrls: ['./ordersfilter.component.css']
+  styleUrls: ['./ordersfilter.component.scss']
 })
 export class OrdersfilterComponent implements OnInit {
 

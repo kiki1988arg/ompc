@@ -1,6 +1,10 @@
 
     <kendo-grid
-        [data]="gridData"           
+        [data]="gridView"      
+        [pageSize]="pageSize"
+          [skip]="skip"
+          [pageable]="true"  
+          (pageChange)="pageChange($event)"   
         >
         <kendo-grid-column    
           *ngFor="let column of columns"          
